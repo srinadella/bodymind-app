@@ -2,11 +2,14 @@
   "name": "bodymind-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://srinadella.github.io",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint"
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
@@ -30,6 +33,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
+    "gh-pages": "^5.0.0",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vite": "^7.3.0"
